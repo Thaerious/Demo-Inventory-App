@@ -5,6 +5,9 @@ import Path from "path";
 const port = process.env.port || 8000;
 const app = Express();
 
+app.set(`views`, `www/view`);
+app.set(`view engine`, `ejs`);
+
 loadRoutes();
 
 const server = app.listen(port, "0.0.0.0", ()=>{
@@ -28,5 +31,6 @@ async function loadRoutes(path = process.env.routes || "src/routes") {
         const fullpath = Path.join(process.cwd(), path, entry);
         const { default: route } = await import(fullpath);
         app.use(route);
+        console.log(fullpath);
     }        
 }

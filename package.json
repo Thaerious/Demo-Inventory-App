@@ -4,14 +4,17 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-style": "sass www/view/index/index.scss www/view/index/index.css",
+    "watch-style": "sass www/view/index/index.scss www/view/index/index.css --watch"    
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "sass": "^1.56.1"
   },
   "type": "module",
   "devDependencies": {
