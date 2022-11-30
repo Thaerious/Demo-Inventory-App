@@ -4,7 +4,7 @@ import loadSelect from "./load_select.mjs";
 function formListRecords(){
     window.addEventListener("load", async () => {
         const records = await InventoryAPI.listRecords();
-        loadSelect(records, 'description');
+        loadSelect(records);
 
         const buttSelect = document.querySelector("#list_records #select");
         buttSelect.addEventListener("click", clickSelect);

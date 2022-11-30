@@ -3,7 +3,7 @@
  * data : data source object
  * field : the field that contains the displayed value
  */
- function loadSelect(data, field) {
+ function loadSelect(data, field = "description") {
     const selectElement = document.querySelector("#record-list");
     selectElement.replaceChildren();
 

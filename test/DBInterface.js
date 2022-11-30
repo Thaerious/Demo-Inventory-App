@@ -16,14 +16,6 @@ describe(`Database Interface test`, function () {
         dbi.close();
     });    
 
-    it(`create a record`, async function () {
-        const dbi = new DBInterface();
-        await dbi.connect();
-        const id = await dbi.createRecord("apple", 4, 3.50);
-        assert.ok(id != null);
-        dbi.close();
-    });  
-
     it(`list records`, async function () {
         const dbi = new DBInterface();
         await dbi.connect();

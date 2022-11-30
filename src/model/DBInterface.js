@@ -35,7 +35,7 @@ class DBInterface{
     async retrieveRecord(id){
         const q = `SELECT * from ${DBInterface.TABLE_NAME} where id=?`;
         const [res, fields] = await this.connection.execute(q, [id]);  
-        return res;       
+        return res;
     }
 
     async setDescription(id, value){
@@ -55,7 +55,7 @@ class DBInterface{
 
     async deleteRecord(id){        
         const q = `DELETE from ${DBInterface.TABLE_NAME} where id=?`;
-        const [res, fields] = await this.connection.execute(q, [id]);   
+        const [res, fields] = await this.connection.execute(q, [id]);
         return res.affectedRows;            
     }
 
